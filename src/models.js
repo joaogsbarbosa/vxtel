@@ -17,7 +17,7 @@ class Tarifa {
         })
         // Dispara erro se não houver correspondência
         if (tarifa.length == 0)
-            throw new Error('Tarifa não existe na tabela!')
+            throw new Error('Tarifa não encontrada na tabela de tarifas!')
         // Retorna o valor do minuto corresponde à origem e destino
         return tarifa[0]["$/min"];
     }
@@ -27,7 +27,6 @@ class Plano {
     constructor(minutos) {
         this.nome = 'FaleMais ' + minutos;
         this.minutos = minutos;
-        this.validaPlano();
     }
 
     // Valida se o plano informado está na tabela
@@ -41,7 +40,7 @@ class Plano {
         })
         // Dispara erro se não houver correspondência
         if (plano.length == 0)
-            throw new Error('Plano não existe na tabela!')
+            throw new Error('Plano não encontrado na tabela de planos!');
     }
 }
 

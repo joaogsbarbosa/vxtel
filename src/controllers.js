@@ -5,11 +5,16 @@ async function geraValores(origem, destino, tempo, planoMinutos) {
     plano = new models.Plano(planoMinutos);
     chamada = new models.Chamada(tarifa, plano, tempo);
 
-    [tarifa, tarifaPlano] = teste = await Promise.all([
-        chamada.calculaTarifa(),
-        chamada.calculaTarifaPlano()
-    ])
-
+    try {
+        [, tarifa, tarifaPlano] = await Promise.all([
+            plano.validaPlano(),
+            chamada.calculaTarifa(),
+            chamada.calculaTarifaPlano()
+        ]);
+    } catch (error) {
+        return error.message;
+    }
+    
     return {
         "Origem": origem,
         "Destino": destino,
