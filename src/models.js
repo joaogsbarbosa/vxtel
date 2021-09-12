@@ -68,9 +68,12 @@ class Chamada {
             return 0;
 
         // Acrescenta 10% no valor do minuto 
-        valorMinuto *= 1/10
+        valorMinuto *= 1.1
 
-        return valorMinuto * minsExcedentes;
+        // Arredonda valor da tarifa com plano
+        tarifa = (valorMinuto * minsExcedentes).toFixed(2);
+
+        return tarifa;
     }
 }
 
