@@ -6,6 +6,7 @@ class Tarifa {
         this.origem = origem;
         this.destino = destino;
     }
+    
     // Busca o valor do minuto
     async buscaValorMinuto() {
         // Lê o csv em ./tables/tarifas.csv
