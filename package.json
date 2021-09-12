@@ -8,6 +8,7 @@
     "test": "tests"
   },
   "scripts": {
+    "start": "node src/index.js",
     "test": "mocha tests/index.js"
   },
   "repository": {
@@ -21,6 +22,7 @@
   },
   "homepage": "https://github.com/joaogsbarbosa/vxtel#readme",
   "dependencies": {
-    "@hapi/hapi": "^20.1.5"
+    "@hapi/hapi": "^20.1.5",
+    "csvtojson": "^2.0.10"
   }
 }
