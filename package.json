@@ -1,0 +1,26 @@
+{
+  "name": "vxtel",
+  "version": "1.0.0",
+  "description": "Desafio da Vórtx - Foco em backend Node.js",
+  "main": "src/index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "mocha tests/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joaogsbarbosa/vxtel.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joaogsbarbosa/vxtel/issues"
+  },
+  "homepage": "https://github.com/joaogsbarbosa/vxtel#readme",
+  "dependencies": {
+    "@hapi/hapi": "^20.1.5"
+  }
+}
