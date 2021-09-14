@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "node src/index.js",
-    "test": "mocha tests/index.js"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",

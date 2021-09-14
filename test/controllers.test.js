@@ -1,6 +1,7 @@
 const assert = require('assert');
 const controllers = require('../src/controllers');
 
+
 describe('Testa valores da tabela', () => {
 
     it('Linha 1', async () => {
