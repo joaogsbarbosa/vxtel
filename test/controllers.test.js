@@ -55,7 +55,7 @@ describe('Testa valores da tabela', () => {
 
 describe('Outros cenários de erro nos controllers', () => {
 
-    it('Tarifa não encontrada', async () => {
+    it('Não encontra tarifas', async () => {
         try {
             valor = await controllers.geraValores(20, 20, 100, 60);
         } catch (erro) {
@@ -64,7 +64,7 @@ describe('Outros cenários de erro nos controllers', () => {
         assert.deepEqual(valor, 'Tarifa não encontrada na tabela de tarifas!');
     });
 
-    it('Plano não encontrado', async () => {
+    it('Não encontra planos', async () => {
         try {
             valor = await controllers.geraValores(18, 11, 200, 999);
         } catch (erro) {

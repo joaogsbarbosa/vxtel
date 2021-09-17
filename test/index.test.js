@@ -14,7 +14,7 @@ describe('GET /', () => {
     });
 
     // Requisição correta
-    it('responds with 200', async () => {
+    it('Responde com 200', async () => {
         const res = await server.inject({
             method: 'get',
             url: '/'
@@ -35,7 +35,7 @@ describe('GET /api/v1/tarifas/', () => {
     });
 
     // Requisição correta
-    it('responds with 200', async () => {
+    it('Responde com 200', async () => {
         const res = await server.inject({
             method: 'get',
             url: '/api/v1/tarifas/?origem=011&destino=017&tempo=10&plano=30'
@@ -44,7 +44,7 @@ describe('GET /api/v1/tarifas/', () => {
     });
 
     // Requisição correta
-    it('responds with 200', async () => {
+    it('Responde com 200', async () => {
         const res = await server.inject({
             method: 'get',
             url: '/api/v1/tarifas/?origem=017&destino=011&tempo=10&plano=120'
@@ -53,7 +53,7 @@ describe('GET /api/v1/tarifas/', () => {
     });
 
     // Parâmetros não informados
-    it('responds with 400', async () => {
+    it('Responde com 400', async () => {
         const res = await server.inject({
             method: 'get',
             url: '/api/v1/tarifas/'
@@ -62,7 +62,7 @@ describe('GET /api/v1/tarifas/', () => {
     });
 
     // Faltando parâmetro "plano"
-    it('responds with 400', async () => {
+    it('Responde com 400', async () => {
         const res = await server.inject({
             method: 'get',
             url: '/api/v1/tarifas/?origem=011&destino=017&tempo=10'
@@ -71,7 +71,7 @@ describe('GET /api/v1/tarifas/', () => {
     });
 
     // Plano não existe
-    it('responds with 400', async () => {
+    it('Responde com 400', async () => {
         const res = await server.inject({
             method: 'get',
             url: '/api/v1/tarifas/?origem=011&destino=017&tempo=10&plano=999'
@@ -92,7 +92,7 @@ describe('GET /abc', () => {
     });
 
     // Requisição feita a um endpoint inexistente
-    it('responds with 404', async () => {
+    it('Responde com 404', async () => {
         const res = await server.inject({
             method: 'get',
             url: '/abc'

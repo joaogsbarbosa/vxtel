@@ -4,7 +4,7 @@ const models = require('../src/models');
 
 describe('Casos de uso nos models', () => {
 
-    it('Dados corretos', async () => {
+    it('Usa dados corretos', async () => {
         tarifa = new models.Tarifa('011', '017');
         plano = new models.Plano('30');
         chamada = new models.Chamada(tarifa, plano, '60');
@@ -20,7 +20,7 @@ describe('Casos de uso nos models', () => {
         assert.deepEqual(valor, [undefined, '102.00', '56.10']);
     });
     
-    it('Não encontrou tarifa', async () => {
+    it('Não encontra tarifas', async () => {
         tarifa = new models.Tarifa('011', '099');
         plano = new models.Plano('30');
         chamada = new models.Chamada(tarifa, plano, '60');
@@ -36,7 +36,7 @@ describe('Casos de uso nos models', () => {
         assert.deepEqual(valor, 'Tarifa não encontrada na tabela de tarifas!');
     });
 
-    it('Não encontrou plano', async () => {
+    it('Não encontra planos', async () => {
         tarifa = new models.Tarifa('011', '017');
         plano = new models.Plano('99');
         chamada = new models.Chamada(tarifa, plano, '60');
