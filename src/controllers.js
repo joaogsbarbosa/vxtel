@@ -1,6 +1,10 @@
 const models = require('./models');
 
 async function geraValores(origem, destino, tempo, planoMinutos) {
+
+    if ( !origem || !destino || !tempo || !planoMinutos )
+        throw new Error('Parâmetros incorretos!')
+
     tarifa = new models.Tarifa(origem, destino);
     plano = new models.Plano(planoMinutos);
     chamada = new models.Chamada(tarifa, plano, tempo);
@@ -12,7 +16,7 @@ async function geraValores(origem, destino, tempo, planoMinutos) {
             chamada.calculaTarifaPlano()
         ]);
     } catch (error) {
-        return error.message;
+        throw error;
     }
     
     return {
