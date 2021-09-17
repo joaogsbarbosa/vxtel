@@ -55,7 +55,8 @@ class Chamada {
     // Cálculo da tarifa sem o plano
     async calculaTarifa() {
         const valorMinuto = await this.tarifa.buscaValorMinuto();
-        return valorMinuto * this.tempo;
+        tarifa = (valorMinuto * this.tempo).toFixed(2);
+        return tarifa;
     }
 
     // Cálculo da tarifa com o plano
@@ -65,7 +66,7 @@ class Chamada {
         const minsExcedentes = this.tempo - this.plano.minutos;
 
         if (minsExcedentes <= 0) // O tempo de ligação é todo coberto pelo plano
-            return 0;
+            return '0.00';
 
         // Acrescenta 10% no valor do minuto 
         valorMinuto *= 1.1
