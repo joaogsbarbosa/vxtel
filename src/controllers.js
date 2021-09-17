@@ -20,12 +20,12 @@ async function geraValores(origem, destino, tempo, planoMinutos) {
     }
     
     return {
-        "Origem": origem,
-        "Destino": destino,
-        "Tempo": tempo,
-        "Plano FaleMais": plano.nome,
-        "Com FaleMais": tarifaPlano,
-        "Sem FaleMais": tarifa
+        "origem": origem,
+        "destino": destino,
+        "tempo": tempo,
+        "planoFaleMais": plano.nome,
+        "comFaleMais": tarifaPlano,
+        "semFaleMais": tarifa
     }
 }
 
